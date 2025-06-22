@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  font-family: 'DM Sans', 'Inter', sans-serif;
+}
+
+body {
+  color: #0f172a; /* slate-900 - darker text for more contrast */
+  background-color: #0f172a; /* slate-900 - dark mode by default */
+}
+
+.dark body {
+  color: #f1f5f9; /* slate-100 - brighter text for more contrast */
+  background-color: #020617; /* slate-950 - even darker background */
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(51, 65, 85, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.4) 1px, transparent 1px);
+}
+
+/* Premium glassmorphism */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.dark .glassmorphism {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Neumorphic elements */
+.neumorphic-light {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+}
+
+.neumorphic-dark {
+  background: linear-gradient(145deg, #101827, #0d141f);
+  box-shadow: 10px 10px 20px #080c14, -10px -10px 20px #162032;
+}
+
+/* Glowing effects */
+.glow-blue {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.7), 0 0 30px rgba(56, 189, 248, 0.4);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.7), 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.7), 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+/* Premium gradients */
+.gradient-electric-blue {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.gradient-indigo {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.gradient-emerald {
+  background: linear-gradient(135deg, #10b981, #2dd4bf);
+}
+
+/* Animated background gradients */
+.animated-gradient {
+  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Added animations */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Extra animations for enhanced UI */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.8), 0 0 30px rgba(56, 189, 248, 0.4); }
+  100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Enhanced border gradients */
+.border-gradient-blue {
+  border-image: linear-gradient(45deg, #3b82f6, #06b6d4) 1;
+}
+
+.border-gradient-purple {
+  border-image: linear-gradient(45deg, #8b5cf6, #d946ef) 1;
+}
+
+/* Tech brand colors for badges */
+.tech-react { background-color: #61DAFB; color: #0A1929; }
+.tech-node { background-color: #339933; color: white; }
+.tech-js { background-color: #F7DF1E; color: #242424; }
+.tech-ts { background-color: #3178C6; color: white; }
+.tech-mongo { background-color: #47A248; color: white; }
