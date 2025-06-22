@@ -115,8 +115,7 @@ const About = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
       
       {/* Subtle noise texture */}
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.02] mix-blend-overlay pointer-events-none"></div>
-      
+     
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           title="About Me"
